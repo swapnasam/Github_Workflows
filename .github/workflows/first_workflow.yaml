@@ -30,12 +30,12 @@ jobs:
 
   job4:
     name: Fourth job
+    needs: [job1, job2, job3]
     runs-on: macos-13
     steps:
       - name: Step one
         uses: actions/checkout@v2
       - name: Print Date
         run: date
-        needs: [job1, job2, job3]
 
 
