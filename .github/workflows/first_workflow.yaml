@@ -7,8 +7,8 @@ jobs:
     steps: 
       - name: Step one
         uses: actions/checkout@v2
-      - name: Step two
-        run: env | sort
+      - name: Print date
+        run: date
 
   job2: 
     name: Second job
@@ -16,8 +16,26 @@ jobs:
     steps:
     - name: Step one
       uses: actions/checkout@v2 
-    - name: Step two
-      run: "Get-ChildItem Env: | Sort-Object Name"
+    - name: print date
+      run: Get-Date
+
+  job3: 
+    name: Third job
+    runs-on: macos-latest
+    steps:
+      - name: Step one
+        uses: actions/checkout@v2
+      - name: Print date
+        run: date
+
+  job4:
+    name: Fourth job
+    runs-on: macos-13
+    steps:
+      - name: Step one
+        uses: actions/checkout@v2
+      - name: Print Date
+        run: date
 
 
 
